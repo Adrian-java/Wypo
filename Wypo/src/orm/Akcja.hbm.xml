@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-04-05 10:32:41 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="my.comp.auto.domain.Akcja" table="AKCJA">
+        <id name="idAkcja" type="int">
+            <column name="ID_AKCJA" />
+            <generator class="assigned" />
+        </id>
+        <property name="dataRozpoczecia" type="java.sql.Date">
+            <column name="DATA_ROZPOCZECIA" />
+        </property>
+        <property name="planowanaDataZakonczenia" type="java.sql.Date">
+            <column name="PLANOWANA_DATA_ZAKONCZENIA" />
+        </property>
+        <property name="faktycznaDataZakonczenia" type="java.sql.Date">
+            <column name="FAKTYCZNA_DATA_ZAKONCZENIA" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+        <property name="idKlient" type="java.lang.String">
+            <column name="ID_KLIENT" />
+        </property>
+        <property name="idPunktWypozyczenia" type="int">
+            <column name="ID_PUNKT_WYPOZYCZENIA" />
+        </property>
+        <property name="idPracownikaWypozyczajacego" type="int">
+            <column name="ID_PRACOWNIKA_WYPOZYCZAJACEGO" />
+        </property>
+        <property name="idSamochod" type="java.lang.String">
+            <column name="ID_SAMOCHOD" />
+        </property>
+        <property name="idPlatnosc" type="int">
+            <column name="ID_PLATNOSC" />
+        </property>
+        <property name="idPunktPrzyjecia" type="int">
+            <column name="ID_PUNKT_PRZYJECIA" />
+        </property>
+        <property name="idPracownikaPrzyjmujacego" type="int">
+            <column name="IDPRACOWNIKAPRZYJMUJACEGO" />
+        </property>
+    </class>
+</hibernate-mapping>

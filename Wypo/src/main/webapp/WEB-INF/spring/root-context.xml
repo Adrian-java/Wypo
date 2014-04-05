@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		<bean id="dataSource" class="org.springframework.jdbc.datasource.SingleConnectionDataSource">
+        <property name="driverClassName">
+            <value>com.mysql.jdbc.Driver</value>
+        </property>
+        <property name="url">
+            <value>jdbc:mysql://localhost:3306/wypozyczalnia</value>
+        </property>
+        <property name="username">
+            <value>root</value>
+        </property>
+        <property name="password">
+            <value></value>
+        </property>
+        <property name="suppressClose" value="true"></property>
+    </bean> 
+   
+    
+     <bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				
+			</props>
+		</property>
+		 <property name="mappingResources">
+			<list>
+				<value>Akcja.hbm.xml</value>
+				<value>Klient.hbm.xml</value>
+				<value>MarkaWyposazenie.hbm.xml</value>
+				<value>Marmod.hbm.xml</value>
+				<value>Platnosc.hbm.xml</value>
+				<value>Pracownik.hbm.xml</value>
+				<value>Punkt.hbm.xml</value>
+				<value>Samochod.hbm.xml</value>
+				<value>Wyposazenie.hbm.xml</value>
+			</list>
+		</property> 
+
+	</bean>
+	<bean name="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="hibDao" class="my.comp.auto.dao.HibernateDaoImpl" >
+		<property name="hibTemplate" ref="hibernateTemplate"></property>
+	</bean>
+	
+	<bean id="AutoKlientBean" class="my.comp.auto.service.AutoKlientImpl">
+		<property name="hibernateDao">
+			<ref bean="hibDao" />
+		</property>
+	</bean>
+	
+    
+</beans>

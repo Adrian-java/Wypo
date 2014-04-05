@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="my.comp.auto.domain.Klient" table="klient">
+        <id name="pesel" type="java.lang.String">
+            <column name="pesel" />
+            <generator class="assigned" />
+        </id>
+        <property name="imie" type="java.lang.String">
+            <column name="imie" />
+        </property>
+        <property name="nazwisko" type="java.lang.String">
+            <column name="nazwisko" />
+        </property>
+        <property name="telefon" type="java.lang.String">
+            <column name="telefon" />
+        </property>
+        <property name="stan" type="int">
+            <column name="stan" />
+        </property>
+        <property name="miejscowosc" type="java.lang.String">
+            <column name="miejscowosc" />
+        </property>
+        <property name="ulica" type="java.lang.String">
+            <column name="ulica" />
+        </property>
+        <property name="poczta" type="java.lang.String">
+            <column name="poczta" />
+        </property>
+        <property name="kodPocztowy" type="java.lang.String">
+            <column name="kod_pocztowy" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="email" />
+        </property>
+        <property name="nrDomu" type="java.lang.String">
+            <column name="nr_domu" />
+        </property>
+    </class>
+</hibernate-mapping>

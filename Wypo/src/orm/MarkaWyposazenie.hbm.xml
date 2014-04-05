@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-04-05 10:32:41 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="my.comp.auto.domain.MarkaWyposazenie" table="MARKAWYPOSAZENIE">
+        <id name="idMarkaWyposazenie" type="int">
+            <column name="ID_MARKAWY_POSAZENIE" />
+            <generator class="assigned" />
+        </id>
+        <property name="idWyposazenie" type="int">
+            <column name="ID_WYPOSAZENIE" />
+        </property>
+        <property name="idMarmod" type="int">
+            <column name="ID_MARMOD" />
+        </property>
+    </class>
+</hibernate-mapping>

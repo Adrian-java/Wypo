@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-04-05 10:32:41 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="my.comp.auto.domain.Pracownik" table="PRACOWNIK">
+        <id name="idPracownik" type="int">
+            <column name="ID_PRACOWNIK" />
+            <generator class="assigned" />
+        </id>
+        <property name="imie" type="java.lang.String">
+            <column name="IMIE" />
+        </property>
+        <property name="nazwisko" type="java.lang.String">
+            <column name="NAZWISKO" />
+        </property>
+        <property name="idPunkt" type="int">
+            <column name="ID_PUNKT" />
+        </property>
+    </class>
+</hibernate-mapping>

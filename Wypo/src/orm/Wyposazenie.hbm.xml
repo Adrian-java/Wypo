@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-04-05 10:32:41 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="my.comp.auto.domain.Wyposazenie" table="WYPOSAZENIE">
+        <id name="idWyposazenie" type="int">
+            <column name="ID_WYPOSAZENIE" />
+            <generator class="assigned" />
+        </id>
+        <property name="typ" type="java.lang.String">
+            <column name="TYP" />
+        </property>
+        <property name="klimatyzacja" type="java.lang.String">
+            <column name="KLIMATYZACJA" />
+        </property>
+        <property name="skrzyniaBiegow" type="java.lang.String">
+            <column name="SKRZ_BIEGOW" />
+        </property>
+        <property name="lDrzwi" type="int" access="field">
+            <column name="L_DRZWI" />
+        </property>
+        <property name="fotele" type="java.lang.String">
+            <column name="FOTELE" />
+        </property>
+        <property name="szyby" type="java.lang.String">
+            <column name="SZYBY" />
+        </property>
+    </class>
+</hibernate-mapping>
