@@ -62,4 +62,10 @@ public class AutoKlientImpl implements AutoKlient {
 		return hibernateDao.getAllKlient();
 	}
 
+	@Override
+	public List getQuery(String query) {
+		// TODO Auto-generated method stub
+		return hibernateDao.getQuery(query);
+	}
+
 }

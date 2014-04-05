@@ -89,4 +89,10 @@ public class HibernateDaoImpl  implements HibernateDao {
 		return null;
 	}
 
+	@Override
+	public List getQuery(String query) {
+		// TODO Auto-generated method stub
+		return hibTemplate.find(query);
+	}
+
 }

@@ -60,4 +60,6 @@ public interface HibernateDao {
 	/*Szuka samochodu po nr vin*/
 	
 	public Samochod findSamochodByVin(String vin);
+	
+	public List getQuery(String query);
 }

@@ -24,7 +24,7 @@ public class KlientController {
 	public String setupForm(Map<String, Object> map){
 		Klient klient = new Klient();
 		map.put("klient", klient);
-		map.put("klientP", klientdao.allKlient());
+		map.put("klientP", klientdao.getQuery("from Klient k where k.stan = 1"));
 		return "klient";
 	}
 	@RequestMapping(value="/klient.do", method=RequestMethod.POST)

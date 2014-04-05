@@ -23,5 +23,6 @@ public interface AutoKlient {
 	
 	public List<Klient> allKlient();
 	
+	public List getQuery(String query);
 	
 }
