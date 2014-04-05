@@ -16,7 +16,7 @@
 		<tr>
 			<td>${pracownik.imie}</td>
 			<td>${pracownik.nazwisko}</td>
-			<td>${pracownik.miejscowosc}</td>
+			<td>${idPunkt.miejscowosc}</td> 
 			
 	
 		</tr>

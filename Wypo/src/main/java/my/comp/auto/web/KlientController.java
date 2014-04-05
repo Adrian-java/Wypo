@@ -33,7 +33,7 @@ public class KlientController {
 	public String setupFormy(Map<String, Object> map){
 		Pracownik pracownik = new Pracownik();;
 		map.put("pracownik", pracownik);
-		map.put("pracownikP", klientdao.getQuery("from pracownik "));
+		map.put("pracownikP", klientdao.getQuery("from Pracownik"));
 		return "pracownik";
 	}
 	
