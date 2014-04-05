@@ -14,8 +14,8 @@
         <property name="nazwisko" type="java.lang.String">
             <column name="NAZWISKO" />
         </property>
-        <property name="idPunkt" type="int">
-            <column name="ID_PUNKT" />
-        </property>
+        <many-to-one name="idPunkt" class="my.comp.auto.domain.Punkt" fetch="select">
+            <column name="ID_PUNKT" not-null="true" />
+        </many-to-one>
     </class>
 </hibernate-mapping>

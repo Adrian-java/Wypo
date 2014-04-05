@@ -11,5 +11,14 @@
         <property name="miejscowosc" type="java.lang.String">
             <column name="MIEJSCOWOSC" />
         </property>
+         <set name="pracownik" table="pracownik"
+                inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_punkt" not-null="true" />
+            </key>
+            <one-to-many class="my.comp.auto.domain.Pracownik" />
+        </set>
     </class>
+    
+    
 </hibernate-mapping>

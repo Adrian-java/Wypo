@@ -4,6 +4,7 @@ import java.util.Map;
 
 import my.comp.auto.dao.HibernateDao;
 import my.comp.auto.domain.Klient;
+import my.comp.auto.domain.Pracownik;
 import my.comp.auto.service.AutoKlientImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,16 @@ public class KlientController {
 		map.put("klientP", klientdao.getQuery("from Klient k where k.stan = 1"));
 		return "klient";
 	}
-	@RequestMapping(value="/klient.do", method=RequestMethod.POST)
+	
+	@RequestMapping("/pracownik")
+	public String setupFormy(Map<String, Object> map){
+		Pracownik pracownik = new Pracownik();;
+		map.put("pracownik", pracownik);
+		map.put("pracownikP", klientdao.getQuery("from pracownik "));
+		return "pracownik";
+	}
+	
+	/*@RequestMapping(value="/klient.do", method=RequestMethod.POST)
 	public String doActions(@ModelAttribute Klient klient, BindingResult result, @RequestParam String action, Map<String, Object> map){
 		Klient klientResult = new Klient();
 		
@@ -48,5 +58,5 @@ public class KlientController {
 		map.put("klient", klientResult);
 		map.put("klientP", klientdao.allKlient());
 		return "klient";
-	}
+	}*/
 }

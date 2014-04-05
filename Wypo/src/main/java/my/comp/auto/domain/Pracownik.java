@@ -8,7 +8,7 @@ public class Pracownik {
 	private int idPracownik;
 	private String imie;
 	private String nazwisko;
-	private int idPunkt;
+	private Punkt idPunkt;
 	
 	public int getIdPracownik() {
 		return idPracownik;
@@ -28,10 +28,10 @@ public class Pracownik {
 	public void setNazwisko(String nazwisko) {
 		this.nazwisko = nazwisko;
 	}
-	public int getIdPunkt() {
+	public Punkt getIdPunkt() {
 		return idPunkt;
 	}
-	public void setIdPunkt(int idPunkt) {
+	public void setIdPunkt(Punkt idPunkt) {
 		this.idPunkt = idPunkt;
 	}
 	
