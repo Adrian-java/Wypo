@@ -31,7 +31,7 @@ public class KlientController {
 	
 	@RequestMapping("/pracownik")
 	public String setupFormy(Map<String, Object> map){
-		Pracownik pracownik = new Pracownik();;
+		Pracownik pracownik = new Pracownik();
 		map.put("pracownik", pracownik);
 		map.put("pracownikP", klientdao.getQuery("from Pracownik"));
 		return "pracownik";

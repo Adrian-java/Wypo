@@ -17,13 +17,23 @@ public class AutoKlientImpl implements AutoKlient {
 	@Override
 	public boolean isKlient(String pesel) {
 		// TODO Auto-generated method stub
-		return false;
+		int count;
+		count = hibernateDao.getQuery("from Klient where pesel = "+pesel).size();
+		if(count==0)
+			return false;
+		else
+			return true;
 	}
 
 	@Override
 	public boolean isFree(String pesel) {
 		// TODO Auto-generated method stub
-		return false;
+		int count;
+		count = hibernateDao.getQuery("from Klient where stan = 0 and pesel="+pesel).size();
+		if(count==1)
+			return false;
+		else
+			return true;
 	}
 
 	@Override
