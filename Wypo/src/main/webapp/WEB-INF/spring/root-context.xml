@@ -60,5 +60,11 @@
 		</property>
 	</bean>
 	
+	<bean id="AutoCarBean" class="my.comp.auto.service.AutoCarImpl">
+		<property name="hibernateDao">
+			<ref bean="hibDao" />
+		</property>
+	</bean>
+	
     
 </beans>
